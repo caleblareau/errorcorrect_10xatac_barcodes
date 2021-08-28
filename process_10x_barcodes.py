@@ -112,7 +112,7 @@ ALPHABET_MINUS = {char: {c for c in DNA_ALPHABET if c != char} for char in DNA_A
 ALPHABET_MINUS['N'] = set(DNA_ALPHABET)
 MAXDIST_CORRECT = 2
 
-def gen_nearby_seqs(seq,wl_idxs, maxdist=3):
+def gen_nearby_seqs(seq, maxdist=3):
 	
 	allowed_indices = [i for i in range(len(seq)) if seq[i] != 'N']
 	required_indices = tuple([i for i in range(len(seq)) if seq[i] == 'N'])
